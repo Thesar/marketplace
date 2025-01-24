@@ -6,6 +6,7 @@
     <title>Beauty Box</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header class="bg-dark text-white text-center py-3">
@@ -16,8 +17,8 @@
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cart.html" >Cart</a></li>
+                    <li class="nav-item"><a class="nav-link" href="beauty-box.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
                     <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
                     <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
@@ -28,11 +29,11 @@
     <main class="container my-4">
         <div class="row">
             <div class="col-md-6">
-                <h2>About the Beauty Box</h2>
+                <h2 id="aboutText" onmouseover="changeTextColor()" onmouseout="resetTextColor()">About the Beauty Box</h2>
                 <p>Receive the latest beauty products and skincare essentials every month. Discover new brands and products tailored to your beauty needs.</p>
                 <p><strong>Price:</strong> 45.99€/month</p>
                 <p>Each box is filled with full-sized products, samples, and exclusive offers just for you.</p>
-                <button class="btn btn-success mt-3">
+                <button class="btn btn-success mt-3" onclick="addToCart()">
                     <i class="fas fa-shopping-cart"></i> Add to Cart
                 </button>
             </div>
@@ -44,14 +45,32 @@
         <h3>Why Choose Our Beauty Box?</h3>
         <p>Our Beauty Box is perfect for beauty enthusiasts looking to explore new products:</p>
         <ul>
-            <li><strong>Curated Selection:</strong> Each month, receive a mix of trending beauty products and skincare essentials.</li>
-            <li><strong>Exclusive Offers:</strong> Enjoy special discounts and promotions available only to subscribers.</li>
-            <li><strong>Discover New Brands:</strong> Explore and try out brands that cater to your beauty needs.</li>
+            <li><strong>Curated Selection:</strong> Handpicked products for you.</li>
+            <li><strong>Exclusive Offers:</strong> Special discounts and promotions.</li>
+            <li><strong>Community:</strong> Join a community of beauty lovers.</li>
         </ul>
-        <a href="index.html" class="btn btn-primary mt-3" target="_blank">Back to Subscription Boxes</a>
+        <div class="text-center mb-4">
+            <a href="index.html" class="btn btn-primary mt-3">Back to Subscription Boxes</a>
+        </div>
     </main>
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 Our Marketplace. All rights reserved.</p>
+        <p>&copy; 2025 Beauty Box. All rights reserved.</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function addToCart() {
+            alert('Item added to cart!');
+        }
+
+        function changeTextColor() {
+            document.getElementById('aboutText').style.color = 'red';
+        }
+
+        function resetTextColor() {
+            document.getElementById('aboutText').style.color = 'black';
+        }
+    </script>
 </body>
 </html>

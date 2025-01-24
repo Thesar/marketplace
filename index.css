@@ -19,3 +19,10 @@ footer {
   background: #35424a;
   color: #ffffff;
   margin-top: auto;}
+body {
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  transition: color 0.3s ease;
+}

@@ -28,11 +28,11 @@
     <main class="container my-4">
         <div class="row">
             <div class="col-md-6">
-                <h2>About the Pet Treat Box</h2>
+                <h2 id="aboutText" onmouseover="changeTextColor()" onmouseout="resetTextColor()">About the Pet Treat Box</h2>
                 <p>High-quality treats and toys for pets, customized for their size and preferences.</p>
                 <p><strong>Price:</strong> 24.99€/month</p>
                 <p>Keep your furry friends happy with delicious and safe treats.</p>
-                <button class="btn btn-success mt-3">
+                <button class="btn btn-success mt-3" onclick="addToCart()">
                     <i class="fas fa-shopping-cart"></i> Add to Cart
                 </button>
             </div>
@@ -48,10 +48,28 @@
             <li><strong>Customization:</strong> Each box is tailored to your pet's size and preferences.</li>
             <li><strong>Variety:</strong> A selection of treats and toys to keep your pet engaged and happy.</li>
         </ul>
-        <a href="index.html" class="btn btn-primary mt-3">Back to Subscription Boxes</a>
+        <div class="text-center mb-4">
+            <a href="index.html" class="btn btn-primary mt-3">Back to Subscription Boxes</a>
+        </div>
     </main>
     <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2025 Our Marketplace. All rights reserved.</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function addToCart() {
+            alert('Item added to cart!');
+        }
+
+        function changeTextColor() {
+            document.getElementById('aboutText').style.color = 'red';
+        }
+
+        function resetTextColor() {
+            document.getElementById('aboutText').style.color = 'black';
+        }
+    </script>
 </body>
 </html>
